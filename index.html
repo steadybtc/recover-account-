@@ -1,264 +1,95 @@
-<!doctype html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Account Recovery — Help for Hacked or Disabled Accounts</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account Recovery Service</title>
   <style>
-    /* Inline CSS for the whole page (keeps everything in one file) */
-    :root{
-      --bg:#0f1724;
-      --card:#0b1220;
-      --accent:#25D366; /* WhatsApp green */
-      --muted:#9aa4b2;
-      --glass: rgba(255,255,255,0.03);
-      --maxw:900px;
-      --radius:14px;
-      --shadow: 0 8px 30px rgba(2,6,23,0.6);
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      color-scheme: dark;
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0a0a0a, #1f1f1f);
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
-    html,body{height:100%;}
-    body{
-      margin:0;
-      background: linear-gradient(180deg,#071029 0%, #0b1320 60%);
-      color:#e6eef6;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:32px;
+
+    .container {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      max-width: 500px;
+      width: 90%;
     }
-    .wrap{
-      width:100%;
-      max-width:var(--maxw);
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      overflow:hidden;
-      display:flex;
-      gap:0;
-      flex-direction:column;
+
+    h1 {
+      color: #00ff9d;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
     }
-    header{
-      padding:28px 32px;
-      display:flex;
-      align-items:center;
-      gap:16px;
-      background: linear-gradient(90deg, rgba(37,211,102,0.06), transparent);
-      border-bottom:1px solid rgba(255,255,255,0.02);
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ddd;
     }
-    .logo{
-      width:56px;height:56px;
-      border-radius:10px;
-      background:linear-gradient(135deg,#063449,#0fa47a);
-      display:flex;align-items:center;justify-content:center;
-      font-weight:700;color:white;font-size:20px;
-      box-shadow: 0 6px 18px rgba(5,25,15,0.5);
+
+    a.button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 22px;
+      background-color: #25d366;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
     }
-    header h1{
-      margin:0;font-size:18px;line-height:1.05;
-      letter-spacing:0.2px;
+
+    a.button:hover {
+      background-color: #1ebd5b;
     }
-    header p{margin:0;color:var(--muted);font-size:13px;}
-    main{
-      display:flex;
-      gap:28px;
-      padding:28px 32px;
-      flex-wrap:wrap;
-      background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+
+    footer {
+      margin-top: 20px;
+      font-size: 0.85rem;
+      color: #999;
     }
-    article{
-      flex:1 1 520px;
-      min-width:260px;
-      background:var(--glass);
-      padding:20px;
-      border-radius:12px;
-      border:1px solid rgba(255,255,255,0.02);
-    }
-    article h2{margin:0 0 8px 0;font-size:20px;}
-    article p{margin:0 0 14px 0;color:#dbe9f7;line-height:1.5;}
-    .steps{
-      background: rgba(255,255,255,0.01);
-      padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.015);
-    }
-    .steps ol{margin:0;padding-left:18px;color:var(--muted);}
-    .steps li{margin:10px 0;line-height:1.45;}
-    aside{
-      width:320px;
-      min-width:240px;
-      display:flex;
-      flex-direction:column;
-      gap:14px;
-    }
-    .card{
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Account Recovery — Help for Hacked or Disabled Accounts</title>
-  <style>
-    :root{
-      --bg:#0f1724;
-      --card:#0b1220;
-      --accent:#25D366;
-      --muted:#9aa4b2;
-      --glass: rgba(255,255,255,0.03);
-      --maxw:900px;
-      --radius:14px;
-      --shadow: 0 8px 30px rgba(2,6,23,0.6);
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      color-scheme: dark;
-    }
-    html,body{height:100%;margin:0;padding:0;}
-    body{
-      background: linear-gradient(180deg,#071029 0%, #0b1320 60%);
-      color:#e6eef6;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:24px;
-    }
-    .wrap{
-      width:100%;
-      max-width:var(--maxw);
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      overflow:hidden;
-      display:flex;
-      flex-direction:column;
-    }
-    header{
-      padding:24px;
-      display:flex;
-      align-items:center;
-      gap:14px;
-      background: linear-gradient(90deg, rgba(37,211,102,0.06), transparent);
-      border-bottom:1px solid rgba(255,255,255,0.02);
-    }
-    .logo{
-      width:50px;height:50px;
-      border-radius:10px;
-      background:linear-gradient(135deg,#063449,#0fa47a);
-      display:flex;align-items:center;justify-content:center;
-      font-weight:700;color:white;font-size:18px;
-      box-shadow: 0 6px 18px rgba(5,25,15,0.5);
-    }
-    header h1{margin:0;font-size:18px;}
-    header p{margin:0;color:var(--muted);font-size:13px;}
-    main{
-      padding:26px;
-      display:flex;
-      flex-direction:column;
-      gap:24px;
-    }
-    article{
-      background:var(--glass);
-      padding:20px;
-      border-radius:12px;
-      border:1px solid rgba(255,255,255,0.02);
-    }
-    article h2{margin-top:0;font-size:20px;}
-    article p{color:#dbe9f7;line-height:1.6;}
-    .steps{
-      background: rgba(255,255,255,0.02);
-      padding:14px;
-      border-radius:10px;
-      border:1px solid rgba(255,255,255,0.015);
-    }
-    .steps ol{margin:0;padding-left:18px;color:var(--muted);}
-    .steps li{margin:10px 0;}
-    .help-box{
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border:1px solid rgba(255,255,255,0.02);
-      border-radius:12px;
-      padding:20px;
-      text-align:center;
-    }
-    .help-box h3{margin:0 0 10px 0;}
-    .wa-button{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      text-decoration:none;
-      padding:14px 18px;
-      border-radius:12px;
-      font-weight:700;
-      font-size:16px;
-      background: linear-gradient(90deg, #00b764, #08c86a);
-      color:white;
-      border:none;
-      box-shadow: 0 8px 20px rgba(3,80,40,0.25);
-      margin-top:10px;
-    }
-    .wa-button:active{transform:translateY(1px);}
-    .muted{color:var(--muted);font-size:13px;}
-    footer{
-      padding:18px 26px;
-      text-align:center;
-      color:var(--muted);
-      border-top:1px solid rgba(255,255,255,0.02);
-      font-size:13px;
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.4rem;
+      }
+      p {
+        font-size: 0.95rem;
+      }
+      a.button {
+        padding: 12px 18px;
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="logo">AR</div>
-      <div>
-        <h1>Recover Your Hacked or Disabled Account</h1>
-        <p>Get your account back safely and quickly.</p>
-      </div>
-    </header>
-
-    <main>
-      <article>
-        <h2>If your Facebook or other account was hacked or disabled, it can often be recovered</h2>
-        <p>
-          Losing access to your social account is alarming — but in most cases, accounts that were hacked, taken over, or disabled can be restored if the right steps are taken quickly.
-          Follow these important steps to secure your data and begin recovery.
-        </p>
-        <div class="steps">
-          <strong>Recommended steps:</strong>
-          <ol>
-            <li><b>Secure your email & phone:</b> Ensure the contact details tied to the account are still accessible.</li>
-            <li><b>Use official recovery pages:</b> Visit the platform’s help center for verified recovery links.</li>
-            <li><b>Gather proof:</b> Collect evidence like screenshots or IDs if required.</li>
-            <li><b>Change passwords:</b> Update all linked accounts and enable two-factor authentication.</li>
-          </ol>
-        </div>
-      </article>
-
-      <div class="help-box">
-        <h3>Need Help Fast?</h3>
-        <p class="muted">
-          Message our recovery team directly on WhatsApp for guided assistance.
-        </p>
-        <a class="wa-button" href="https://wa.me/19895358767" target="_blank" rel="noopener noreferrer">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 .5C5.73.5.5 5.73.5 12a11.46 11.46 0 001.5 5.7L0 23.5l5.97-1.56A11.49 11.49 0 0012 23.5c6.27 0 11.5-5.23 11.5-11.5S18.27.5 12 .5z" fill="#25D366"/>
-            <path d="M17.22 14.06l-1.09-.32a.63.63 0 00-.63.15l-.9.91a9.43 9.43 0 01-4.12-4.12l.91-.9a.63.63 0 00.15-.63l-.32-1.09a.63.63 0 00-.61-.44 5.72 5.72 0 00-2.46.57c-.2.1-.36.28-.44.49a6.89 6.89 0 002.69 8.44 6.91 6.91 0 003.47.95c.21 0 .42-.02.63-.05a.63.63 0 00.49-.44 5.72 5.72 0 00.57-2.46.63.63 0 00-.44-.61z" fill="#fff"/>
-          </svg>
-          Message on WhatsApp
-        </a>
-        <p class="muted" style="margin-top:8px;">
-          Or add: <b>+1 989 535 8767</b> and message <em>"Account recovery"</em>
-        </p>
-      </div>
-    </main>
-
-    <footer>
-      © <span id="year"></span> Account Recovery Help — We never ask for your password.
-    </footer>
+  <div class="container">
+    <h1>Recover Your Hacked or Disabled Account</h1>
+    <p>
+      Has your Facebook or any of your online accounts been hacked or disabled?
+      Don’t panic — it can still be recovered if the right steps are taken early.
+      <br><br>
+      Contact our support team on WhatsApp to help you recover your account quickly and securely.
+    </p>
+    <a class="button" href="https://wa.me/19895358767" target="_blank">
+      💬 Contact on WhatsApp
+    </a>
   </div>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <footer>© 2025 Account Recovery Service</footer>
 </body>
 </html>
