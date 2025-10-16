@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Account Recovery — Help for Hacked or Disabled Accounts</title>
+  <style>
+    /* Inline CSS for the whole page (keeps everything in one file) */
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#25D366; /* WhatsApp green */
+      --muted:#9aa4b2;
+      --glass: rgba(255,255,255,0.03);
+      --maxw:900px;
+      --radius:14px;
+      --shadow: 0 8px 30px rgba(2,6,23,0.6);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color-scheme: dark;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      background: linear-gradient(180deg,#071029 0%, #0b1320 60%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }
+    .wrap{
+      width:100%;
+      max-width:var(--maxw);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      display:flex;
+      gap:0;
+      flex-direction:column;
+    }
+    header{
+      padding:28px 32px;
+      display:flex;
+      align-items:center;
+      gap:16px;
+      background: linear-gradient(90deg, rgba(37,211,102,0.06), transparent);
+      border-bottom:1px solid rgba(255,255,255,0.02);
+    }
+    .logo{
+      width:56px;height:56px;
+      border-radius:10px;
+      background:linear-gradient(135deg,#063449,#0fa47a);
+      display:flex;align-items:center;justify-content:center;
+      font-weight:700;color:white;font-size:20px;
+      box-shadow: 0 6px 18px rgba(5,25,15,0.5);
+    }
+    header h1{
+      margin:0;font-size:18px;line-height:1.05;
+      letter-spacing:0.2px;
+    }
+    header p{margin:0;color:var(--muted);font-size:13px;}
+    main{
+      display:flex;
+      gap:28px;
+      padding:28px 32px;
+      flex-wrap:wrap;
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+    }
+    article{
+      flex:1 1 520px;
+      min-width:260px;
+      background:var(--glass);
+      padding:20px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    article h2{margin:0 0 8px 0;font-size:20px;}
+    article p{margin:0 0 14px 0;color:#dbe9f7;line-height:1.5;}
+    .steps{
+      background: rgba(255,255,255,0.01);
+      padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.015);
+    }
+    .steps ol{margin:0;padding-left:18px;color:var(--muted);}
+    .steps li{margin:10px 0;line-height:1.45;}
+    aside{
+      width:320px;
+      min-width:240px;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+    .card{
+      padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .cta{
+      display:flex;flex-direction:column;gap:12px;align-items:stretch;
+    }
+    .wa-button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      text-decoration:none;
+      padding:14px 18px;
+      border-radius:12px;
+      font-weight:700;
+      font-size:16px;
+      background: linear-gradient(90deg, #00b764, #08c86a);
+      color:white;
+      border: none;
+      box-shadow: 0 8px 20px rgba(3,80,40,0.25);
+    }
+    .wa-button:active{transform:translateY(1px);}
+    .muted{color:var(--muted);font-size:13px;}
+    footer{
+      padding:18px 26px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      border-top:1px solid rgba(255,255,255,0.02);
+      background:transparent;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .warning{
+      background:linear-gradient(90deg, rgba(255,183,77,0.06), rgba(255,255,255,0.01));
+      padding:12px;border-radius:10px;border:1px solid rgba(255,183,77,0.06);
+      color:#ffdcb2;font-size:13px;
+    }
+    @media (max-width:880px){
+      main{padding:18px;}
+      aside{width:100%;}
+      article{order:2;}
+      aside{order:1;}
+      header{padding:20px;}
+    }
+  </style>
+</head>
+<body>
+  <br> <br>
+  <div class="wrap" role="main" aria-labelledby="pageTitle">
+    <header>
+      <div class="logo" aria-hidden="true">AR</div>
+      <div>
+        <h1 id="pageTitle">Recover Your Hacked or Disabled Account</h1>
+        <p>Immediate steps you can take to get your account back — safely and quickly.</p>
+      </div>
+    </header>
+
+    <main>
+      <article aria-labelledby="headline">
+        <h2 id="headline">If your Facebook or other account was hacked or disabled, it can often be recovered</h2>
+        <p>
+          Losing access to your social account is alarming — but in most cases accounts that were hacked, taken over, or disabled can be restored if the right steps are taken quickly.
+          This page explains what to do, what to avoid, and how to get professional help to recover your account.
+        </p>
+
+        <div class="steps" aria-label="Recommended steps">
+          <strong>Recommended steps (do these first):</strong>
+          <ol>
+            <li><strong>Secure your email & phone:</strong> Make sure the email and phone number connected to the account are secure and still accessible to you.</li>
+            <li><strong>Use official recovery pages:</strong> Follow the platform’s account recovery or appeal flow (e.g., Facebook Help Center). Never share your password in public.</li>
+            <li><strong>Collect proof:</strong> Prepare evidence such as account creation details, recent login locations, screenshots of suspicious activity, or copies of ID if required by the platform.</li>
+            <li><strong>Change passwords & enable 2FA:</strong> On any linked accounts (email, other social), change passwords and enable two-factor authentication immediately.</li>
+            <li><strong>Report impersonation & fraud:</strong> If scammers are using your account to defraud others, report it to the platform and to any affected contacts.</li>
+          </ol>
+        </div>
+
+        
+      </article>
+
+      <aside>
+        <div class="card" aria-labelledby="helpTitle">
+          <h3 id="helpTitle" style="margin:0 0 8px 0;">Quick Help — Contact WhatsApp</h3>
+          <p class="muted" style="margin:0 0 12px 0;">
+            For direct assistance with account recovery, you may contact our support team on WhatsApp. We will guide you through the official steps and help you prepare the required documents.
+          </p>
+
+          <div class="cta" role="group" aria-label="Contact options">
+            <!-- WhatsApp link (button) -->
+            <a class="wa-button" href="https://wa.me/19895358767" target="_blank" rel="noopener noreferrer" aria-label="Contact on WhatsApp +1 989 535 8767">
+              <!-- Small WhatsApp SVG icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.52 3.48A11.88 11.88 0 0012 0C5.372 0 .11 5.262.11 11.889c0 2.097.55 4.146 1.6 5.955L0 24l6.43-1.68a11.859 11.859 0 005.57 1.34h.01c6.627 0 11.889-5.262 11.889-11.889 0-3.177-1.237-6.158-3.359-8.31z" fill="#fff" opacity="0.06"/>
+                <path d="M17.472 14.382l-1.137-.51c-.154-.068-.333-.017-.44.111l-.858 1.06c-1.18-.63-2.15-1.6-2.78-2.78l1.06-.86c.13-.11.18-.29.11-.44l-.51-1.14a.52.52 0 00-.67-.3c-1.44.48-2.76 1.36-3.86 2.46-1.1 1.1-1.98 2.42-2.46 3.86a.52.52 0 00.31.67l1.14.51c.15.07.25.23.25.39 0 2.37 1.93 4.3 4.31 4.3.16 0 .32-.09.39-.25l.51-1.14c.09-.19 0-.42-.19-.53z" fill="#fff"/>
+              </svg>
+              Recover on WhatsApp
+            </a>
+
+            <div class="muted" style="font-size:13px;">
+              Or add: <strong>+1 989 535 8767</strong> and message: <em>"Account recovery"</em>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" aria-labelledby="whatToPrepare">
+          <h4 id="whatToPrepare" style="margin:0 0 8px 0;font-size:15px;">What to prepare before messaging</h4>
+          <ul style="margin:0;padding-left:16px;color:var(--muted);line-height:1.45;">
+            <li>Account username / profile link</li>
+            <li>Email and phone number tied to the account</li>
+            <li>Approximate date you lost access</li>
+            <li>Any screenshots or evidence of suspicious activity</li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Account Recovery Help</div>
+      <div class="muted">We never ask for your full password. Stay safe.</div>
+    </footer>
+  </div>
+
+  <script>
+    // Small script to fill current year and improve accessibility focus for keyboard users
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // keyboard focus hint: allow keyboard users to quickly jump to the WhatsApp button with "w"
+    document.addEventListener('keydown', function(e){
+      if((e.key === 'w' || e.key === 'W') && !document.activeElement.matches('input,textarea')){
+        const btn = document.querySelector('.wa-button');
+        if(btn){ btn.focus(); }
+      }
+    });
+  </script>
+</body>
+</html>
